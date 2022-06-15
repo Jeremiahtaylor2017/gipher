@@ -17,7 +17,7 @@ html, body {
     grid-area: home;
 }
 
-.search {
+.searchbar {
     grid-area: search;
 }
 
@@ -43,4 +43,35 @@ html, body {
 
 #sidebar-2 {
     grid-area: side2;
+}
+
+.out {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    width: 750px;
+    height: 220px;
+    background: white;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px;
+    margin: 0;
+    white-space: nowrap;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.item {
+    display: inline-block;
+    max-width: 100%;
+    margin: 0 10px;
+    max-height: 100%;
+    background: rgba(0, 0, 0, 0.05) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    box-shadow: 0 0 10px #dfdfdf;
 }
