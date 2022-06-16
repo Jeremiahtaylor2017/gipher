@@ -1,54 +1,80 @@
 import 'dotenv/config';
-import imageResults, { xScroll } from './helpers/carousel';
+import imageResults, { carousel, loader, hideLoader, showLoader } from './helpers/carousel';
 
 const form = document.querySelector('form');
-const carousel = document.querySelector('.carousel');
-let initialLimit = 10;
+let initialLimit = 5;
+let initialOffset = 0;
 
+hideLoader();
 
-const getGiphy = async (limit) => {
+const getGiphy = async (limit, offset) => {
     let str = document.getElementById('search').value.trim();
-    let url = `https://api.giphy.com/v1/gifs/search?api_key=${process.env.GIPHY_API_KEY}&limit=${limit}&q=${str}`;
+    let url = `https://api.giphy.com/v1/gifs/search?api_key=${process.env.GIPHY_API_KEY}&limit=${limit}&q=${str}&offset=${offset}`;
     let response = await fetch(url)
     if (!response.ok) {
         throw new Error(`An error occurred: ${response.status}`);
     }
     return await response.json();
 }
-// let response = getGiphy(initialLimit);
-// console.log(response.data);
-// const showGiphy = e => {
-//     if (e.target.id === 'btnSearch') {
-//         const response = getGiphy(initialLimit);
-//         console.log(response.data);
-//         imageResults(carousel, response.data);
-//     }
-// }
 
 const showGiphy = e => {
     if (e.target.id === 'btnSearch') {
         e.preventDefault();
-        getGiphy(initialLimit)
-        .then(content => {
-            console.log(content.meta);
-            console.log(content.data);
-            imageResults(carousel, content);
-        })
-        // let str = document.getElementById('search').value.trim();
-        // let url = `https://api.giphy.com/v1/gifs/search?api_key=${process.env.GIPHY_API_KEY}&limit=${limit}&q=${str}`;
-        // console.log(url);
-        // fetch(url)
-        // .then(res => res.json())
-        // .then(content => {
-        //     // content.pagination.count = 35;
-        //     console.log(content.data);
-        //     console.log(content.meta);
-        //     console.log(content.pagination);
-        //     imageResults(carousel, content);
-        // })
-        // .catch(err => console.log(err));
+        carousel.style.display = 'flex';
+        showLoader();
+        setTimeout(() => {
+            try {
+                getGiphy(initialLimit, initialOffset)
+                .then(content => {
+                    console.log(content);
+                    console.log(content.meta);
+                    console.log(content.data);
+                    imageResults(carousel, content);
+                })
+            } catch (error) {
+                console.log(error.message);
+            } finally {
+                hideLoader();
+            }
+        }, 500)
+        
     }
 }
 
 form.addEventListener('click', showGiphy)
-xScroll(carousel);
+
+let scrollEvents = [];
+carousel.addEventListener("wheel", e => {
+    e.preventDefault();
+    carousel.scrollLeft += e.deltaY;
+    scrollEvents.push(carousel.scrollLeft);
+    let condition = false;
+    for (let i = 0; i < scrollEvents.length; i++) {
+        if (scrollEvents[i] === scrollEvents[i - 1]) {
+            condition = true;
+        } else {
+            condition = false;
+        }
+    }
+    if (condition && carousel.scrollLeft !== 0) {
+        initialOffset += 5;
+        carousel.appendChild(loader);
+        showLoader();
+        setTimeout(() => {
+            try {
+                getGiphy(initialLimit, initialOffset)
+                .then(content => {
+                    console.log(content);
+                    console.log(content.meta);
+                    console.log(content.data);
+                    imageResults(carousel, content);
+                })
+            } catch (error) {
+                console.log(error.message);
+            } finally {
+                hideLoader();
+            }
+        }, 500)
+    }
+    
+});
