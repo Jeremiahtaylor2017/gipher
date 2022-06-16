@@ -2,7 +2,7 @@
   "name": "gipher",
   "version": "1.0.0",
   "description": "Giphy Social Media App",
-  "main": "app.js",
+  "type": "module",
   "devDependencies": {
     "os-browserify": "^0.3.0",
     "parcel": "^2.6.0",
