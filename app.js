@@ -4,9 +4,11 @@ import User from './classes/user.js';
 
 // global variables
 const form = document.querySelector('form');
+const anchors = document.querySelectorAll('.navAchors');
+console.log(anchors); //stuck here. Getting null?????
 let initialLimit = 5;
 let initialOffset = 0;
-const leftSideBar = document.getElementById('sidebar-1');
+
 
 hideLoader();
 
@@ -88,3 +90,8 @@ carousel.addEventListener("wheel", e => {
     }
     
 });
+
+
+// anchor.addEventListener("mouseleave", e => {
+//     e.preventDefault();
+// })

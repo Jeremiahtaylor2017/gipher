@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <!-- <script src="https://kit.fontawesome.com/df84eb9eef.js" crossorigin="anonymous"></script> -->
     <title>Gipher</title>
+    <script type="module" src="app.js" defer></script>
 </head>
 <body>
     <div class="mainContainer">
@@ -25,16 +26,61 @@
             <nav>
                 <ul>
                     <li class="navIcons">
-                        <div class="icons">
-                            <img src="./assets/Vector 4.svg" alt="home">
-                            
+                        <div>
+                            <a class="navAnchors" href="#">
+                                <div class="icons">
+                                    <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="icon" d="M7.39796 14.5V22H1V10L10.6939 1L20 10V22H13.4082V14.5H7.39796Z" stroke="#A8A8A8" stroke-width="2" stroke-linejoin="round"/>
+                                    </svg>
+                                        
+                                    <!-- <img src="./assets/Vector 4.svg" alt="home"> -->
+                                </div>
+                                <span>Home</span>
+                            </a>
                         </div>
-                        <a href="#">Home</a>
                     </li>
-                    <li><a href="#">Notifications</a></li>
-                    <li><a href="#">Messages</a></li>
-                    <li><a href="#">Saved</a></li>
-                    <li><a href="#">Settings</a></li>
+                    <li class="navIcons">
+                        <div>
+                            <a class="navAnchors" href="#">
+                                <div class="icons">
+                                    <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="icon" d="M3.71442 18.1055C0.89197 18.1055 1.00052 20.5491 1.00052 21.9067H23.254C23.254 20.5491 23.3625 18.1055 20.5401 18.1055C20.9924 13.4897 20.5401 4.25818 14.2981 4.25818C14.2981 3.17212 14.5157 1 12.1275 1C9.73928 1 9.95639 3.17212 9.95639 4.25818C3.71442 4.25818 3.26211 13.4897 3.71442 18.1055Z" stroke="#A8A8A8" stroke-width="2" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <span>Notifications</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="navIcons">
+                        <div>
+                            <a class="navAnchors" href="#">
+                                <div class="icons">
+                                    <img src="./assets/Rectangle 12.svg" alt="messages">
+                                </div>
+                                <span>Messages</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="navIcons">
+                        <div>
+                            <a class="navAnchors" href="#">
+                                <div class="icons">
+                                    <img src="./assets/Vector 5.svg" alt="saved">
+                                </div>
+                                <span>Saved</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="navIcons">
+                        <div>
+                            <a class="navAnchors" href="#">
+                                <div class="icons">
+                                    <img src="./assets/Vector 14.svg" alt="settings">
+                                </div>
+                                <span>Settings</span>
+                            </a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -85,6 +131,6 @@
     </div>
     
 
-    <script type="module" src="app.js"></script>
+    
 </body>
 </html>

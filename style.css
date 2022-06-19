@@ -9,9 +9,10 @@ html, body {
     margin: 0;
     box-sizing: border-box;
 }
-
 body {
   font-family: 'Poppins', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .mainContainer {
@@ -53,38 +54,64 @@ body {
 .navIcons {
   display: flex;
   flex-direction: row;
+  line-height: 50px;
+  /* margin-left: 21px; */
+}
+
+.navIcons div a {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  height: 65px;
+  text-decoration: none;
+  color: var(--lightGrey);
+  font-size: 16px;
+  padding-left: 60px;
+  align-items: center;
+}
+
+.navIcons div a:hover {
+  color: var(--purple);
+}
+
+.svg {
+  stroke: var(--purple);
 }
 
 .icons {
   margin-right: 20px;
 }
 
+.icons img {
+  padding-top: 12px;
+}
+
 #sidebar-1 {
     grid-area: side1;
     background-color: #F9F6FF;
+    height: calc(100% - 90.88px);
+    width: 300px;
+    position: absolute; /*Need to figure out the sticky situation*/
+    margin-top: 90.88px;
 }
 
 #sidebar-1 nav ul {
   list-style: none;
+  padding: 0;
 }
 
-#sidebar-1 nav ul li {
-  line-height: 50px;
-  margin-left: 21px;
-}
-
-#sidebar-1 nav ul li a {
-  text-decoration: none;
-  color: var(--lightGrey);
-  font-size: 16px;
+#sidebar-1 nav ul li:hover {
+  background-color: #EEE8FF;
 }
 
 #content {
     grid-area: main;
+    height: 100%;
 }
 
 #sidebar-2 {
     grid-area: side2;
+    height: 100%;
 }
 
 .out {
