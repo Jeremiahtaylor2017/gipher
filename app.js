@@ -1,11 +1,21 @@
 import 'dotenv/config';
 import imageResults, { carousel, loader, hideLoader, showLoader } from './helpers/carousel';
+import User from './classes/user.js';
 
+// global variables
 const form = document.querySelector('form');
 let initialLimit = 5;
 let initialOffset = 0;
+const leftSideBar = document.getElementById('sidebar-1');
 
 hideLoader();
+
+const jt = {
+    user: new User('Jeremiah Taylor', '@jeremiahtaylor', 'https://i.imgur.com/WmRUduL.jpeg')
+}
+
+jt.user.setProfileDetails();
+
 
 const getGiphy = async (limit, offset) => {
     let str = document.getElementById('search').value.trim();

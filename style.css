@@ -1,24 +1,30 @@
+:root {
+  --purple: #5833C3;
+  --darkGrey: #5B5B5B;
+  --lightGrey: #A8A8A8;
+}
+
 html, body {
     height: 100%;
     margin: 0;
     box-sizing: border-box;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
 .mainContainer {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-gap: 10px 20px;
+    grid-template-columns: 300px auto 300px;
     grid-template-areas: 
-        "head home search"
+        "head home home"
         "side1 main side2";
 }
 
 .homeHeader {
     grid-area: home;
-}
-
-.searchbar {
-    grid-area: search;
+    color: #5833C3;
 }
 
 .page {
@@ -31,10 +37,46 @@ html, body {
 #name {
     grid-area: head;
     text-align: left;
+    background-color: #F9F6FF;
+    color: #5833C3;
+    padding-left: 31px;
+}
+
+.profileName {
+  color: var(--darkGrey);
+}
+
+.profileHandle {
+  color: var(--lightGrey);
+}
+
+.navIcons {
+  display: flex;
+  flex-direction: row;
+}
+
+.icons {
+  margin-right: 20px;
 }
 
 #sidebar-1 {
     grid-area: side1;
+    background-color: #F9F6FF;
+}
+
+#sidebar-1 nav ul {
+  list-style: none;
+}
+
+#sidebar-1 nav ul li {
+  line-height: 50px;
+  margin-left: 21px;
+}
+
+#sidebar-1 nav ul li a {
+  text-decoration: none;
+  color: var(--lightGrey);
+  font-size: 16px;
 }
 
 #content {
@@ -63,6 +105,7 @@ html, body {
     white-space: nowrap;
     border-top: 2px solid rgba(0, 0, 0, 0.1);
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    padding-right: 50px;
 }
 
 .item {
