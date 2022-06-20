@@ -4,6 +4,8 @@ import User from './classes/user.js';
 
 // global variables
 const form = document.querySelector('form');
+const textarea = document.querySelector('textarea');
+const userContainer = document.querySelector('.userContainer');
 const anchors = document.querySelectorAll('.navAchors');
 console.log(anchors); //stuck here. Getting null?????
 let initialLimit = 5;
@@ -11,6 +13,8 @@ let initialOffset = 0;
 
 
 hideLoader();
+
+
 
 const jt = {
     user: new User('Jeremiah Taylor', '@jeremiahtaylor', 'https://i.imgur.com/WmRUduL.jpeg')
@@ -90,6 +94,16 @@ carousel.addEventListener("wheel", e => {
     }
     
 });
+
+userContainer.prepend(jt.user.addImage('75px', '75px'));
+
+const autoResize = e => {
+    e.preventDefault();
+    e.target.style.height = 'auto';
+    e.target.style.height = e.target.scrollHeight + 'px';
+}
+
+textarea.addEventListener('input', autoResize, false);
 
 
 // anchor.addEventListener("mouseleave", e => {

@@ -35,4 +35,13 @@ export default class User {
         div.appendChild(innerDiv);
         profileArea.appendChild(div);
     }
+
+    addImage(height='100px', width='100px') {
+        const image = document.createElement('img');
+        image.src = this.image.src;
+        image.style.borderRadius = '50%';
+        image.style.height = height;
+        image.style.width = width;
+        return image;
+    }
 }

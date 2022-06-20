@@ -18,7 +18,7 @@
             <h1>Gipher</h1>
         </div>
         <div class="homeHeader">
-            <h3 class="homeHeader">Home</h3>
+            <h3>Home</h3>
         </div>
         <div id="sidebar-1" class="page">
             <div class="profile">
@@ -86,26 +86,38 @@
         </div>
         <main id="content" class="page">
             <!-- This is the form for sending the API request -->
-            <form>
-                <label for="search"></label>
-                <input id="search" type="search">
-                <button id="btnSearch">Post</button>
-            </form>
-            <div class="out">
-                <div class="carousel">
-                    <div class="lds-roller">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
+            <div class="userContainer">
+                <div class="userPost border">
+                    <form>
+                        <label for="search">
+                            <textarea name="status" placeholder="What's new?"></textarea>
+                            <div class="separator"></div>
+                            <div class="lowerPost">
+                                <input class="border" id="search" type="search" placeholder="Search Giphys">
+                                <input id="btnSearch" type="submit" value="Search"></input>
+                                <button class="postButton" type="submit">Post</button>
+                            </div>
+                            
+                        </label>
+                    </form>
+                    <div class="out">
+                        <div class="carousel">
+                            <div class="lds-roller">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
             </div>
+            
         </main>
         <div id="sidebar-2" class="page">
             <div class="trending">
