@@ -115,6 +115,11 @@ carousel.addEventListener('click', e => {
     }
 })
 
+postButton.addEventListener('click', e => {
+    e.preventDefault();
+    addPost(users.jt.name, users.jt.handle, users.jt.addImage('75px', '75px'));
+})
+
 // anchor.addEventListener("mouseleave", e => {
 //     e.preventDefault();
 // })
