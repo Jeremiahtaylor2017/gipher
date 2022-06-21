@@ -12,12 +12,9 @@ export default imageResults = (carousel, response) => {
         a.href = "#";
         a.innerHTML = `<img src="${img.src}" alt="${img.alt}"></img>`;
         div.appendChild(a);
-        // div.innerHTML = `<img src="${img.src}" alt="${img.alt}"></img>`;
         carousel.appendChild(div);
     })
 }
-
-export let returnedGiphy = document.querySelectorAll('.item');
 
 export const loader = document.querySelector('.lds-roller');
 export const hideLoader = () => {

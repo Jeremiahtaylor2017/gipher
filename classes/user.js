@@ -1,5 +1,3 @@
-const profileArea = document.querySelector('#sidebar-1 .profile');
-
 export default class User {
     constructor(name, handle, image) {
         this.name = name;
@@ -11,7 +9,7 @@ export default class User {
         this.image.style.borderRadius = '50%';
     }
 
-    setProfileDetails() {
+    setProfileDetails(element) {
         const div = document.createElement('div');
         div.style.display = 'flex';
         div.style.flexDirection = 'row';
@@ -32,7 +30,7 @@ export default class User {
         div.style.marginLeft = '22px';
         div.appendChild(this.image);
         div.appendChild(innerDiv);
-        profileArea.appendChild(div);
+        element.appendChild(div);
     }
 
     addImage(height='100px', width='100px') {

@@ -16,6 +16,9 @@
   "author": "Jeremiah Taylor",
   "license": "ISC",
   "dependencies": {
+    "@giphy/js-components": "^5.5.2",
+    "@giphy/js-fetch-api": "^4.2.2",
+    "@types/throttle-debounce": "^5.0.0",
     "dotenv": "^16.0.1"
   }
 }

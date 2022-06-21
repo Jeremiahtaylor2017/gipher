@@ -16,6 +16,8 @@ body {
   font-family: 'Poppins', sans-serif;
   max-width: 1300px;
   margin: 0 auto;
+  overflow: hidden;
+  /* background-color: var(--lightPurple); */
 }
 
 ::-webkit-scrollbar {
@@ -55,13 +57,6 @@ body {
 .homeHeader h3 {
   padding-left: 50px;
 }
-
-/* .page {
-    display: flex;
-    flex-flow: column;
-    height: 100%;
-    flex: 1 1 auto;
-} */
 
 #name {
     grid-area: head;
@@ -118,10 +113,11 @@ body {
 #sidebar-1 {
     grid-area: side1;
     background-color: #F9F6FF;
-    height: calc(100% - 90.88px);
+    /* height: calc(100% - 90.88px); */
     width: 300px;
-    position: absolute; /*Need to figure out the sticky situation*/
-    margin-top: 90.88px;
+    position: sticky; /*Need to figure out the sticky situation*/
+    min-height: 100vh;
+    /* margin-top: 90.88px; */
 }
 
 #sidebar-1 nav ul {
@@ -135,15 +131,97 @@ body {
 
 #content {
     grid-area: main;
-    height: 100%;
+    height: 92vh;
     max-width: 100%;
     display: flex;
     flex-direction: column;
+    overflow: auto;
 }
 
 #sidebar-2 {
     grid-area: side2;
     height: 100%;
+    width: 300px;
+}
+
+.trending, .suggested {
+  padding-left: 25px;
+}
+
+.trending ul, .suggested ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.trendingOut {
+  line-height: 0.5;
+  margin-bottom: 30px;
+}
+
+.trendingOut a {
+  text-decoration: none;
+  color: var(--darkGrey);
+  font-size: 14px;
+}
+
+.trendingOut p {
+  font-size: 12px;
+  color: var(--lightGrey);
+}
+
+.suggested {
+  margin-top: 20px;
+}
+
+.suggested ul li {
+  margin-bottom: 20px;
+}
+
+.showMore {
+  text-decoration: none;
+  color: var(--purple);
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.showMore:hover {
+  text-decoration: underline;
+}
+
+.rock div,
+.michael div,
+.chris div,
+.ron div {
+  margin-left: 0 !important;
+}
+
+.rock div img,
+.michael div img,
+.chris div img,
+.ron div img {
+  height: 50px !important;
+  width: 50px !important;
+}
+
+.rock div div,
+.michael div div,
+.chris div div,
+.ron div div {
+  margin-left: 5px !important;
+}
+
+.rock div div .profileName,
+.michael div div .profileName,
+.chris div div .profileName,
+.ron div div .profileName {
+  font-size: 14px !important;
+}
+
+.rock div div .profileHandle,
+.rocmichaelk div div .profileHandle,
+.chris div div .profileHandle,
+.ron div div .profileHandle {
+  font-size: 12px !important;
 }
 
 .out {
@@ -169,9 +247,9 @@ body {
 
 .item {
     display: inline-block;
-    /* max-width: 100%; */
+    max-width: 100%;
     margin: 0 10px;
-    /* max-height: 100%; */
+    max-height: 100%;
     background-size: cover;
     position: relative;
 }
