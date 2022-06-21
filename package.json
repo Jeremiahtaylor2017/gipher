@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "parcel index.html && parcel watch index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html --no-scope-hoist"
   },
   "author": "Jeremiah Taylor",
   "license": "ISC",
