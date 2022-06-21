@@ -5,18 +5,172 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- <script src="https://kit.fontawesome.com/df84eb9eef.js" crossorigin="anonymous"></script> -->
     <title>Gipher</title>
+    <script type="module" src="app.js" defer></script>
 </head>
 <body>
-    <main>
-        <form>
-            <label for="search"></label>
-            <input id="search" type="search">
-            <button id="btnSearch">Go</button>
-        </form>
-        <div class="out"></div>
-    </main>
-
-    <script type="module" src="app.js"></script>
+    <div class="mainContainer">
+        <div id="name">
+            <h1>Gipher</h1>
+        </div>
+        <div class="homeHeader">
+            <h3>Home</h3>
+        </div>
+        <div id="sidebar-1" class="page">
+            <div class="profile">
+            </div>
+            <nav>
+                <ul>
+                    <li class="navIcons">
+                        <div>
+                            <a class="navAnchors" href="#">
+                                <div class="icons">
+                                    <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="icon" d="M7.39796 14.5V22H1V10L10.6939 1L20 10V22H13.4082V14.5H7.39796Z" stroke="#A8A8A8" stroke-width="2" stroke-linejoin="round"/>
+                                    </svg>
+                                        
+                                    <!-- <img src="./assets/Vector 4.svg" alt="home"> -->
+                                </div>
+                                <span>Home</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="navIcons">
+                        <div>
+                            <a class="navAnchors" href="#">
+                                <div class="icons">
+                                    <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="icon" d="M3.71442 18.1055C0.89197 18.1055 1.00052 20.5491 1.00052 21.9067H23.254C23.254 20.5491 23.3625 18.1055 20.5401 18.1055C20.9924 13.4897 20.5401 4.25818 14.2981 4.25818C14.2981 3.17212 14.5157 1 12.1275 1C9.73928 1 9.95639 3.17212 9.95639 4.25818C3.71442 4.25818 3.26211 13.4897 3.71442 18.1055Z" stroke="#A8A8A8" stroke-width="2" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <span>Notifications</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="navIcons">
+                        <div>
+                            <a class="navAnchors" href="#">
+                                <div class="icons">
+                                    <img src="./assets/Rectangle 12.svg" alt="messages">
+                                </div>
+                                <span>Messages</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="navIcons">
+                        <div>
+                            <a class="navAnchors" href="#">
+                                <div class="icons">
+                                    <img src="./assets/Vector 5.svg" alt="saved">
+                                </div>
+                                <span>Saved</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="navIcons">
+                        <div>
+                            <a class="navAnchors" href="#">
+                                <div class="icons">
+                                    <img src="./assets/Vector 14.svg" alt="settings">
+                                </div>
+                                <span>Settings</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <main id="content" class="page">
+            <!-- This is the form for sending the API request -->
+            <div id="userContainer" class="userContainer">
+                <div class="userPost border">
+                    <form>
+                        <label for="search">
+                            <textarea name="status" placeholder="What's new?"></textarea>
+                            <div class="separator"></div>
+                            <div class="lowerPost">
+                                <input class="border" id="search" type="search" placeholder="Search Giphys">
+                                <input id="btnSearch" type="submit" value="Search"></input>
+                                <button class="postButton" type="submit">Post</button>
+                            </div>
+                            
+                        </label>
+                    </form>
+                    <div class="out">
+                        <div class="carousel">
+                            <div class="lds-roller">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </main>
+        <div id="sidebar-2" class="page">
+            <div class="trending border">
+                <h3>Trending</h3>
+                <ul>
+                    <li>
+                        <div class="trendingOut">
+                            <a href="#">#Gura</a>
+                            <p>47.8k giphers</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="trendingOut">
+                            <a href="#">#UvaldeCoverUp</a>
+                            <p>24.7k giphers</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="trendingOut">
+                            <a href="#">#internetdown</a>
+                            <p>3,100 giphers</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="trendingOut">
+                            <a href="#">#Airbnb</a>
+                            <p>35.9k giphers</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="trendingOut">
+                            <a href="#">#SummerSolstice2022</a>
+                            <p>89k giphers</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="showMore" href="#">Show more ></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="suggested border">
+                <h3>Suggested</h3>
+                <ul>
+                    <li class="rock"></li>
+                    <li class="michael"></li>
+                    <li class="chris"></li>
+                    <li class="ron"></li>
+                    <li>
+                        <a href="#" class="showMore">Show more ></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

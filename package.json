@@ -2,7 +2,7 @@
   "name": "gipher",
   "version": "1.0.0",
   "description": "Giphy Social Media App",
-  "main": "app.js",
+  "type": "module",
   "devDependencies": {
     "os-browserify": "^0.3.0",
     "parcel": "^2.6.0",
@@ -10,12 +10,15 @@
     "process": "^0.11.10"
   },
   "scripts": {
-    "start": "parcel index.html --open",
+    "start": "parcel index.html && parcel watch index.html",
     "build": "parcel build index.html"
   },
   "author": "Jeremiah Taylor",
   "license": "ISC",
   "dependencies": {
+    "@giphy/js-components": "^5.5.2",
+    "@giphy/js-fetch-api": "^4.2.2",
+    "@types/throttle-debounce": "^5.0.0",
     "dotenv": "^16.0.1"
   }
 }
