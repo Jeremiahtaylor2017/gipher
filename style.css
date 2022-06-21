@@ -56,12 +56,12 @@ body {
   padding-left: 50px;
 }
 
-.page {
+/* .page {
     display: flex;
     flex-flow: column;
     height: 100%;
     flex: 1 1 auto;
-}
+} */
 
 #name {
     grid-area: head;
@@ -73,6 +73,7 @@ body {
 
 .profileName {
   color: var(--darkGrey);
+  font-weight: 600;
 }
 
 .profileHandle {
@@ -136,6 +137,8 @@ body {
     grid-area: main;
     height: 100%;
     max-width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 #sidebar-2 {
@@ -232,15 +235,48 @@ input[type="submit"] {
   margin-bottom: 20px;
 }
 
-.userContainer {
+.userContainer, .postContainer {
   display: flex;
   flex-direction: row;
   margin: 0 auto;
 }
 
+.postContainer {
+  margin-top: 25px;
+}
+
 .userPost {
   width: 530px;
   margin-left: 10px;
+}
+
+.nameInPost {
+  padding-left: 30px;
+  margin-right: 15px;
+  color: var(--darkGrey);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.handleInPost {
+  color: var(--lightGrey);
+  font-size: 12px;
+}
+
+.postData div {
+  margin-top: 5px;
+}
+
+.status {
+  padding-left: 30px;
+  font-size: 14px;
+  color: var(--darkGrey);
+}
+
+.selectedImage {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 20px;
 }
 
 .lowerPost {
