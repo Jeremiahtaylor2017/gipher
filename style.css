@@ -377,6 +377,10 @@ input[type="submit"] {
   border: none;
 }
 
+.postButton:hover {
+  cursor: pointer; 
+}
+
 /* loader */
 .lds-roller {
     display: inline-block;
