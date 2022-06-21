@@ -29,3 +29,4 @@ Type in a status -- or not. Search for a giphy to match the mood and hit post as
 - Createable accounts with authentication and authorization.
 - Implement content for links in the nav bar to display information related to the the link.
 - Implement a trending grid for giphys of the day.
+- Mobile responsive
