@@ -9,7 +9,6 @@ export default class User {
         this.image.style.width = '100px';
         this.image.style.height = '100px';
         this.image.style.borderRadius = '50%';
-        this.posts = [];
     }
 
     setProfileDetails() {

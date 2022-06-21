@@ -7,12 +7,17 @@ export default imageResults = (carousel, response) => {
         images.push(img);
         let div = document.createElement('div');
         div.classList.add('item');
-        div.innerHTML = `<img src="${img.src}" alt="${img.alt}"></img>`;
+        let a = document.createElement('a');
+        a.classList.add('returnedGiphy');
+        a.href = "#";
+        a.innerHTML = `<img src="${img.src}" alt="${img.alt}"></img>`;
+        div.appendChild(a);
+        // div.innerHTML = `<img src="${img.src}" alt="${img.alt}"></img>`;
         carousel.appendChild(div);
     })
 }
 
-
+export let returnedGiphy = document.querySelectorAll('.item');
 
 export const loader = document.querySelector('.lds-roller');
 export const hideLoader = () => {

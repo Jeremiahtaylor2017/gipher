@@ -1,5 +1,5 @@
 import 'dotenv/config';
-import imageResults, { carousel, loader, hideLoader, showLoader } from './helpers/carousel';
+import imageResults, { carousel, loader, hideLoader, showLoader, returnedGiphy } from './helpers/carousel';
 import User from './classes/user.js';
 
 // global variables
@@ -53,7 +53,6 @@ const showGiphy = e => {
                 hideLoader();
             }
         }, 500)
-        
     }
 }
 
@@ -105,6 +104,17 @@ const autoResize = e => {
 
 textarea.addEventListener('input', autoResize, false);
 
+carousel.addEventListener('click', e => {
+    if (e.target.tagName === 'IMG') {
+        const image = document.createElement('img');
+        image.src = e.target.src;
+        image.alt = e.target.alt;
+        image.style.height = `${e.target.height}`;
+        document.querySelector('.separator').before(image);
+        document.getElementById('search').value = '';
+        carousel.style.display = 'none';
+    }
+})
 
 // anchor.addEventListener("mouseleave", e => {
 //     e.preventDefault();

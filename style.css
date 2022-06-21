@@ -166,19 +166,26 @@ body {
 
 .item {
     display: inline-block;
-    max-width: 100%;
+    /* max-width: 100%; */
     margin: 0 10px;
-    max-height: 100%;
-    background: rgba(0, 0, 0, 0.05) no-repeat center center;
+    /* max-height: 100%; */
     background-size: cover;
     position: relative;
-    box-shadow: 0 0 10px #dfdfdf;
+}
+
+.item img:hover {
+  border: 5px solid var(--purple);
 }
 
 /* Styling for posts */
 form label {
   display: flex;
   flex-direction: column;
+}
+
+form label img {
+  align-self: center;
+  margin-bottom: 20px;
 }
 
 .border {
@@ -190,8 +197,9 @@ form label {
 input[type="search"] {
   width: 200px;
   height: 25px;
-  padding-left: 5px;
+  padding-left: 10px;
   border-radius: 27px;
+  outline-color: var(--purple)
 }
 
 ::placeholder {
