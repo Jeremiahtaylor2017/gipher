@@ -9,6 +9,7 @@ A front-end web application with functionality similar to Twitter with a focus o
 - Heroku
 - Parcel
 - Dotenv
+- Figma
 - Google Fonts
 - Giphy API
 
