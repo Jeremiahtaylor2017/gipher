@@ -98,7 +98,7 @@ body {
   color: var(--purple);
 }
 
-.svg {
+.navAnchors:hover path {
   stroke: var(--purple);
 }
 
