@@ -20,7 +20,7 @@ Above shows the full screenshot of the website with many of the functionalities 
 This show the fetched giphys being fetched and contained within the status update. The fetched giphys are in an infinite carousel that fetches more giphys upon reaching the end of the scroll.
 
 ## Getting Started
-[Click Here](#) to see the deployed app!
+[Click Here](https://62b260350e326c0008d19450--willowy-alpaca-ab23ac.netlify.app/) to see the deployed app!
 
 Type in a status -- or not. Search for a giphy to match the mood and hit post as many times as you want!
 
