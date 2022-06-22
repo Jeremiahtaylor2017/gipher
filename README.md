@@ -6,7 +6,7 @@ A front-end web application with functionality similar to Twitter with a focus o
 - CSS3
 - JavaScript
 - Node
-- Heroku
+- Netlify
 - Parcel
 - Dotenv
 - Figma
