@@ -1,5 +1,5 @@
 import 'dotenv/config';
-import { imageResults, carousel, loader, hideLoader, showLoader } from './helpers/carousel';
+import imageResults, { carousel, loader, hideLoader, showLoader } from './helpers/carousel';
 import addPost, { addFakePost } from './helpers/post.js';
 import User from './classes/user.js';
 
